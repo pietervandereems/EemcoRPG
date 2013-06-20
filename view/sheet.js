@@ -34,6 +34,18 @@ exports.views = {
             }
         },
         "reduce": "_count"
+    },
+    "listTypes": {
+        "map": function (doc) {
+            var name = null;
+            if (doc.name) {
+                name = doc.name;
+            }
+            if (doc.type) {
+                emit([doc.type, name], 1);
+            }
+        },
+        "reduce": "_count"
     }
 };
 

@@ -16,16 +16,9 @@
     </section>
 <script>
 (function () {
-    var db = require("lib/db"),
-        current = db.guessCurrent();
-    db.getShow(current.db, "rpg", "player", "d1ff13bf9ce957c955e46b228f0003b2", function (err, result) {
-        console.log(err, result);
-        var player;
-        if (!err) {
-            player = document.getElementById("player");
-            player.innerHTML = result;
-        }
-    });
+    "use strict";
+    var main = require("lib/main");
+    main();
 }());
 </script>
 </body>
