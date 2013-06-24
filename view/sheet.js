@@ -56,3 +56,26 @@ exports.shows = {
         }
     }
 };
+
+exports.filters = {
+    typedDocs: function (doc, req) {
+        if (doc._deleted) {
+            return true;
+        }
+        return !!(doc.type);
+    },
+    myDocs: function (doc, req) {
+        if (doc._deleted) {
+            return true;
+        }
+        if (doc.type) {
+            if (doc.type === "player" && doc._id === req.query.id) {
+                return true;
+            }
+            if (doc.type === "character" && doc.player === req.query.id) {
+                return true;
+            }
+        }
+        return false;
+    }
+};
