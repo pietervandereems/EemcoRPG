@@ -8,17 +8,17 @@
 </head>
 <body>
     <section id="character">
-        <section id="info">
+        <section class="info">
         </section>
-        <section id="stats">
+        <section class="stats">
         </section>
-        <section id="body">
+        <section class="body">
         </section>
-        <section id="skills">
+        <section class="skills">
         </section>
-        <section id="equipment">
+        <section class="equipment">
         </section>
-        <section id="weapons">
+        <section class="weapons">
         </section>
     </section>
     <section id="player">
@@ -28,7 +28,7 @@
 (function () {
     "use strict";
     var main = require("lib/main.pouch");
-    main();
+    main("Pieter van der Eems", document.getElementById("character"));
 }());
 </script>
 </body>
