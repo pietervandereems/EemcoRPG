@@ -27,8 +27,10 @@
 <script>
 (function () {
     "use strict";
-    var main = require("lib/main.pouch");
-    main("Pieter van der Eems", document.getElementById("character"));
+    var player = require("lib/main.pouch"), // Libraries
+        database = require("lib/database");
+    database.replicate();
+    player("Pieter van der Eems", document.getElementById("character"));
 }());
 </script>
 </body>
