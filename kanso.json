@@ -2,7 +2,7 @@
     "name": "rpg",
     "version": "0.1.0",
     "description": "My RPG App",
-    "attachments": ["sheet.html"],
+    "attachments": ["sheet.html", "select.html", "select.js", "login.html"],
     "modules": ["lib", "view"],
     "load": "view/sheet",
     "dependencies": {
