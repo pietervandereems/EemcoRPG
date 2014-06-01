@@ -1,5 +1,5 @@
 /*jslint sloppy: true, es5: true, nomen: true*/
-/*global emit: false, getRow: false, isArray: false, log: false, provides: false, registerType: false, require: false, send: false, start: false, sum: false, toJSON: false */
+/*global emit: false, getRow: false, isArray: false, log: false, provides: false, registerType: false, require: false, send: false, start: false, sum: false, toJSON: false, exports: false*/
 // view/sheet
 
 exports.views = {
@@ -77,6 +77,12 @@ exports.filters = {
             }
         }
         return false;
+    },
+    userDocs: function (doc, req) {
+        if (doc._deleted) {
+            return true;
+        }
+        return (doc.user && doc.user === "req.query.user");
     }
 };
 //Copyright 2013 Pieter van der Eems
