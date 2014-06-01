@@ -1,4 +1,5 @@
-/*global module, document*/
+/*jslint browser:true, devel:true*/
+/*global module, require*/
 module.exports = function (Pouch) {
     "use strict";
     var DB = "rpg",
