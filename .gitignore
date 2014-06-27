@@ -1,2 +1,6 @@
 # ignore kanso generated packages
 packages
+# Ignore node modules
+node_modules
+# Ignore vi swap files
+*.swp
