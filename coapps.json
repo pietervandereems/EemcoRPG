@@ -1,0 +1,7 @@
+{
+    "name": "rpg",
+    "version": "0.2.0",
+    "description": "My RPG App",
+    "attachments": ["sheet.html", "select.html", "select.js", "login.html", "selectapp.js"],
+    "dir": ["lib", "view"]
+}
